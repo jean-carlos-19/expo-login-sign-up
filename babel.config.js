@@ -12,6 +12,7 @@ module.exports = function (api) {
             "@/models": "./src/models",
             "@/services": "./src/services",
             "@/views": "./src/views",
+            "@/global": "./global",
             "@/atomic/element": "./atomic/element",
             "@/atomic/component": "./atomic/component",
             "@/atomic/design": "./atomic/design",
