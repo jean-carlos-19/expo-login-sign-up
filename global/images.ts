@@ -3,4 +3,9 @@ const IMAGES = Object.freeze({
     "signUp":require('../assets/images/signup.png'),
     "welcome":require('../assets/images/welcome.png')
 })
-export {IMAGES}
+const ICONS = Object.freeze({
+    "facebook":require('../assets/icons/facebook.png'),
+    "google":require('../assets/icons/google.png'),
+    "apple":require('../assets/icons/apple.png')
+})
+export {IMAGES, ICONS}
