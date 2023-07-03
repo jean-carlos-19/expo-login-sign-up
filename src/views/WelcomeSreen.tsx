@@ -3,13 +3,16 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { theme } from '@/global/theme'
 import { IMAGES } from '@/global/images'
 import { useNavigation } from '@react-navigation/native'
+import Constants from 'expo-constants'
+
+const {statusBarHeight} = Constants;
 
 const WelcomeSreen = () => {
   const navigation =  useNavigation();
   return (
     <View
       className='flex-1'
-      style={{ backgroundColor: theme.bg }}
+      style={{ backgroundColor: theme.bg, paddingTop:statusBarHeight }}
     >
       <View className="flex-1 flex justify-around my-4">
 

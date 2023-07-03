@@ -1,10 +1,16 @@
 import React from 'react'
+import { View } from 'react-native'
+import Constants from 'expo-constants'
+
+const {statusBarHeight} = Constants;
 
 const SignUpScreen = () => {
   return (
-    <div>
+    <View
+      style={{paddingTop:statusBarHeight}}
+    >
       
-    </div>
+    </View>
   )
 }
 

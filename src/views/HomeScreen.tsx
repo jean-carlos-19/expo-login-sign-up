@@ -1,9 +1,14 @@
 import React from 'react'
 import { View } from 'react-native'
+import Constants from 'expo-constants'
+
+const {statusBarHeight} = Constants;
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View
+      style={{paddingTop:statusBarHeight}}
+    >
       
     </View>
   )
