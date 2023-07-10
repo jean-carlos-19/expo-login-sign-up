@@ -1,20 +1,19 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, StatusBar } from 'react-native'
 import { theme } from '@/global/theme'
 import { IMAGES } from '@/global/images'
 import { useNavigation } from '@react-navigation/native'
-import Constants from 'expo-constants'
 
-const {statusBarHeight} = Constants;
 
 const WelcomeSreen = () => {
-  const navigation =  useNavigation();
+  const navigation = useNavigation();
   return (
     <View
       className='flex-1'
-      style={{ backgroundColor: theme.bg, paddingTop:statusBarHeight }}
+      style={{ backgroundColor: theme.bg }}
     >
-      <View className="flex-1 flex justify-around my-4">
+      <StatusBar backgroundColor={theme.bg} />
+      <View className="flex-1 flex justify-around">
 
         <Text className="text-white font-bold text-4xl text-center">
           Let's Get Started!
@@ -29,7 +28,7 @@ const WelcomeSreen = () => {
         <View className="space-y-4">
           <TouchableOpacity
             className='py-3 bg-yellow-400 mx-7 rounded-xl'
-            onPress={()=>{
+            onPress={() => {
               navigation.navigate('SignUp')
             }}
           >
@@ -41,14 +40,14 @@ const WelcomeSreen = () => {
           </TouchableOpacity>
           <View className='flex-row justify-center'>
             <Text className="text-white font-semibold">Already have a account?</Text>
-            <TouchableOpacity onPress={()=>{
+            <TouchableOpacity onPress={() => {
               navigation.navigate('Login')
             }}>
               <Text className="font-semibold text-yellow-400"> Log In</Text>
             </TouchableOpacity>
           </View>
         </View>
-        
+
       </View>
     </View>
   )

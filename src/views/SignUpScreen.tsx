@@ -2,20 +2,20 @@ import { IMAGES, ICONS } from '@/global/images'
 import { theme } from '@/global/theme'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { TouchableOpacity, View, Image, Text, TextInput } from 'react-native'
+import { TouchableOpacity, View, Image, Text, TextInput, Dimensions, StatusBar } from 'react-native'
 import { ArrowLeftIcon } from 'react-native-heroicons/solid'
-import Constants from 'expo-constants'
 
-const { statusBarHeight } = Constants;
+const { height } = Dimensions.get("screen");
 
 const SignUpScreen = () => {
   const navigation = useNavigation();
   return (
     <View
       className="flex-1 bg-white"
-      style={{ backgroundColor: theme.bg, paddingTop: statusBarHeight }}
+      style={{ height: height, backgroundColor: theme.bg }}
     >
-      <View className="flex py-4">
+      <StatusBar backgroundColor={theme.bg} />
+      <View className="flex">
         <View className="flex-row justify-start">
           <TouchableOpacity
             onPress={() => {
@@ -50,7 +50,7 @@ const SignUpScreen = () => {
             value={"Jean Piguave"}
             placeholder='Enter Name '
           />
-           <Text className="text-gray-700 ml-4">Email Address</Text>
+          <Text className="text-gray-700 ml-4">Email Address</Text>
           <TextInput
             className='p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3'
             value={"piguavejc@gmail.com"}
@@ -107,4 +107,4 @@ const SignUpScreen = () => {
   )
 }
 
-export {SignUpScreen}
+export { SignUpScreen }

@@ -2,20 +2,21 @@ import { IMAGES, ICONS } from '@/global/images'
 import { theme } from '@/global/theme'
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { TouchableOpacity, View, Image, Text, TextInput } from 'react-native'
+import { TouchableOpacity, View, Image, Text, TextInput, Dimensions, StatusBar } from 'react-native'
 import { ArrowLeftIcon } from 'react-native-heroicons/solid'
 import Constants from 'expo-constants'
 
-const { statusBarHeight } = Constants;
+const { height } = Dimensions.get("screen");
 
 const LoginScreen = () => {
   const navigation = useNavigation();
   return (
     <View
       className="flex-1 bg-white"
-      style={{ backgroundColor: theme.bg, paddingTop: statusBarHeight }}
+      style={{ height:height, backgroundColor: theme.bg,}}
     >
-      <View className="flex py-4">
+      <StatusBar backgroundColor={theme.bg} />
+      <View className="flex">
         <View className="flex-row justify-start">
           <TouchableOpacity
             onPress={() => {
