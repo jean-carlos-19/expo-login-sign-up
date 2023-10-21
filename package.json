@@ -28,13 +28,16 @@
     "web": "expo start --web",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettier.json"
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettier.json",
+    "build-dev":"eas build -p android --profile development",
+    "build-prod":"eas build -p android --profile production"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
     "expo": "~48.0.18",
     "expo-constants": "~14.2.1",
+    "expo-dev-client": "~2.2.1",
     "expo-status-bar": "~1.4.4",
     "firebase": "^10.3.0",
     "formik": "^2.4.3",
