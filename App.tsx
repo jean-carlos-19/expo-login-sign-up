@@ -1,7 +1,7 @@
 import { BaseNavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeScreen, LoginScreen, SignUpScreen, WelcomeSreen } from '@/views'
-import {RootStackParamList} from '@/global/routes'
+import { HomeScreen, LoginScreen, SignUpScreen, WelcomeSreen } from '@/screens'
+import {RootStackParamList} from '@/types'
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
